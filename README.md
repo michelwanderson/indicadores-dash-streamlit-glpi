@@ -1,237 +1,106 @@
-<div align="center" id="top">
+# 📊 Indicadores de Infraestrutura - GLPI Dashboard
 
-<!-- HEADER STYLE: COMPACT -->
-<img src="readmeai/assets/logos/ice.svg" alt="project-logo" width="150px">
+![Python Version](https://img.shields.io/badge/python-3.9-blue.svg)
+![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-red.svg)
+![Docker](https://img.shields.io/badge/docker-friendly-blue.svg)
 
-# DASH_STREAMLIT_GLPI
-
-*Um dashboard interativo para visualização de dados do GLPI, construído com Streamlit.*
-
-<!-- BADGES -->
-<p>
-  <img src="https://img.shields.io/github/license/wandersonmichel/dash_streamlit_glpi?style=flat-square&logo=opensourceinitiative&logoColor=white&color=E92063" alt="License">
-  <img src="https://img.shields.io/github/last-commit/wandersonmichel/dash_streamlit_glpi?style=flat-square&logo=git&logoColor=white&color=E92063" alt="Last Commit">
-  <img src="https://img.shields.io/github/languages/top/wandersonmichel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="Top Language">
-  <img src="https://img.shields.io/github/languages/count/wandersonmichel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="Language Count">
-</p>
-
-</div>
-
-## 🌈 Table of Contents
-
-<details>
-<summary>Table of Contents</summary>
-
-- [🌈 Table of Contents](#-table-of-contents)
-- [✨ Sobre o Projeto](#-sobre-o-projeto)
-- [� Funcionalidades](#-funcionalidades)
-- [🟡 Estrutura do Projeto](#-estrutura-do-projeto)
-- [🔵 Como Começar](#-como-começar)
-    - [🟣 Pré-requisitos](#-pré-requisitos)
-    - [⚫ Instalação](#-instalação)
-    - [⚪ Como Usar](#-como-usar)
-- [�️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
-- [🌟 Roadmap](#-roadmap)
-- [🤝 Como Contribuir](#-como-contribuir)
-- [📜 Licença](#-licença)
-- [✨ Agradecimentos](#-agradecimentos)
-- [⬆️ Voltar ao Topo](#️-voltar-ao-topo)
-
-</details>
+Um painel de controle interativo construído com Streamlit para visualizar e analisar indicadores de chamados de TI, extraídos de uma instância GLPI.
 
 ---
 
-## ✨ Sobre o Projeto
+## 📖 Sobre o Projeto
 
-O **DASH_STREAMLIT_GLPI** é uma aplicação web interativa para visualização de dados de uma instância GLPI. Construído com Streamlit e Plotly, ele oferece insights sobre o gerenciamento de ativos de TI e as operações de help desk. A aplicação é containerizada usando Docker para facilitar a implantação.
-
----
-
-## 🟠 Funcionalidades
-
-- 📊 **Visualização de Dados Interativa**: Gráficos e tabelas dinâmicas para explorar os dados do GLPI.
-- 🐳 **Containerização com Docker**: Implantação fácil e consistente em qualquer ambiente.
-- 📈 **Análise de Chamados**: Dashboards para analisar chamados por status, categoria, técnico e mais.
-- 🔒 **Autenticação Segura**: (Opcional) Pode ser integrado com `streamlit-authenticator` para controle de acesso.
+Este projeto oferece uma interface web para a equipe de infraestrutura da ESIG Group monitorar e analisar métricas de chamados. Ele permite a filtragem por período e a visualização de dados através de diversos gráficos e tabelas, facilitando a identificação de tendências, gargalos e a performance da equipe.
 
 ---
 
-## 🟡 Estrutura do Projeto
+## ✨ Funcionalidades
 
-```sh
-└── dash_streamlit_glpi/
-    ├── Dockerfile
-    ├── README.md
-    ├── pag_streamlit.py
-    └── requirements.txt
-```
+O dashboard apresenta os seguintes indicadores e visualizações:
 
-### 🟢 Project Index
-
-<details open>
-	<summary><b><code>DASH_STREAMLIT_GLPI/</code></b></summary>
-	<!-- __root__ Submodule -->
-	<details>
-		<summary><b>__root__</b></summary>
-		<blockquote>
-			<div class='directory-path' style='padding: 8px 0; color: #666;'>
-				<code><b>⦿ __root__</b></code>
-			<table style='width: 100%; border-collapse: collapse;'>
-			<thead>
-				<tr style='background-color: #f8f9fa;'>
-					<th style='width: 30%; text-align: left; padding: 8px;'>File Name</th>
-					<th style='text-align: left; padding: 8px;'>Summary</th>
-				</tr>
-			</thead>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://git.esig.group/wanderson.michel/dash_streamlit_glpi/-/blob/main/Dockerfile'>Dockerfile</a></b></td>
-					<td style='padding: 8px;'>Define o ambiente e as dependências para construir a imagem Docker da aplicação.</td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://git.esig.group/wanderson.michel/dash_streamlit_glpi/-/blob/main/pag_streamlit.py'>pag_streamlit.py</a></b></td>
-					<td style='padding: 8px;'>Script principal da aplicação Streamlit, contendo a lógica da interface e dos dashboards.</td>
-				</tr>
-				<tr style='border-bottom: 1px solid #eee;'>
-					<td style='padding: 8px;'><b><a href='https://git.esig.group/wanderson.michel/dash_streamlit_glpi/-/blob/main/requirements.txt'>requirements.txt</a></b></td>
-					<td style='padding: 8px;'>Lista as dependências Python necessárias para executar o projeto.</td>
-				</tr>
-			</table>
-		</blockquote>
-	</details>
-</details>
+*   **Métricas Gerais:** Contagem total de chamados no período selecionado e data da última atualização da base de dados.
+*   **Filtro por Data:** Selecione um intervalo de datas para analisar um período específico.
+*   **Distribuição por Localização:** Gráfico de barras mostrando os locais com mais chamados.
+*   **Atribuição por Técnico:** Gráfico de pizza com a distribuição de chamados entre os técnicos.
+*   **Top 10 Requerentes:** Gráfico de barras com os usuários que mais abriram chamados.
+*   **Distribuição por Categoria:** Treemap para visualizar as categorias de chamados mais comuns.
+*   **Análise de Pareto por Categoria:** Gráfico de Pareto para identificar as categorias que representam 80% dos chamados.
+*   **Distribuição por Horário:** Histograma que mostra os horários de pico na abertura de chamados.
+*   **Tabela de Dados Completa:** Visualize, filtre e explore todos os dados brutos dos chamados.
+*   **Tabela com Links:** Uma tabela que fornece links diretos para cada chamado na interface do GLPI.
 
 ---
 
-## 🔵 Getting Started
+## 🛠️ Tecnologias Utilizadas
 
-### 🟣 Prerequisites
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Para executar este projeto, você precisará ter as seguintes ferramentas instaladas:
+*   **Python 3.9**
+*   **Streamlit:** Para a construção da interface web interativa.
+*   **Pandas:** Para manipulação e análise dos dados.
+*   **Plotly:** Para a criação dos gráficos interativos.
+*   **Docker:** Para conteinerização e fácil deploy da aplicação.
 
-- **Python** (versão 3.8 ou superior)
-- **Pip** (gerenciador de pacotes do Python)
-- **Docker** (para execução em contêiner)
+---
 
-### ⚫ Instalação
+## 🚀 Como Começar
 
-Build dash_streamlit_glpi from the source and install dependencies:
+Siga as instruções abaixo para executar o projeto em seu ambiente local.
 
-1. **Clone the repository:**
+### Pré-requisitos
 
-    ```sh
-    ❯ git clone https://git.esig.group/wanderson.michel/dash_streamlit_glpi
+*   [Python 3.9](https://www.python.org/downloads/)
+*   [Docker](https://www.docker.com/get-started) (Recomendado para um setup mais fácil)
+*   Um arquivo `requirements.txt` com as dependências do Python.
+
+### Configuração
+
+Antes de executar, é necessário configurar a fonte de dados.
+
+1.  Abra o arquivo `pag_streamlit.py`.
+2.  Altere a variável `URL` para o endereço do seu arquivo CSV de dados:
+    ```python
+    URL = "http://seu-servidor/caminho/para/o/arquivo.csv"
     ```
 
-2. **Navigate to the project directory:**
+### 🏃 Executando Localmente (Sem Docker)
 
+1.  Clone o repositório:
     ```sh
-    ❯ cd dash_streamlit_glpi
+    git clone <URL_DO_SEU_REPOSITORIO>
+    cd indicadores-dash-streamlit-glpi
     ```
 
-3. **Instale as dependências:**
-    Você pode instalar as dependências usando Docker (recomendado) ou um ambiente virtual Python.
-
-    **Opção 1: Usando Docker (Recomendado)**
-    Construa a imagem Docker que conterá todas as dependências:
+2.  Crie e ative um ambiente virtual (recomendado):
     ```sh
-    docker build -t dash-glpi .
+    python -m venv venv
+    source venv/bin/activate  # No Windows: venv\Scripts\activate
     ```
 
-    **Opção 2: Usando Pip (Ambiente Local)**
-    Crie e ative um ambiente virtual, e então instale as dependências:
+3.  Instale as dependências:
     ```sh
-    python -m venv .venv
-    source .venv/bin/activate  # No Windows, use: .venv\Scripts\activate
     pip install -r requirements.txt
     ```
 
-### ⚪ Usage
+4.  Execute a aplicação Streamlit:
+    ```sh
+    streamlit run pag_streamlit.py
+    ```
 
-Siga as instruções abaixo de acordo com o método de instalação escolhido.
+A aplicação estará disponível em `http://localhost:8501`.
 
-**Com Docker:**
-Execute o contêiner a partir da imagem criada:
-```sh
-docker run -p 8501:8501 dash-glpi
-```
-Acesse o dashboard em `http://localhost:8501`.
+### 🐳 Executando com Docker
 
-**Localmente com Streamlit:**
-```sh
-streamlit run pag_streamlit.py
-```
+O `Dockerfile` fornecido simplifica a execução do projeto.
 
----
+1.  Construa a imagem Docker:
+    ```sh
+    docker build -t indicadores-glpi .
+    ```
 
-## 🌟 Roadmap
+2.  Execute o contêiner:
+    ```sh
+    docker run -p 8501:8501 indicadores-glpi
+    ```
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
-
-## 🤝 Contributing
-
-- **💬 [Join the Discussions](https://git.esig.group/wanderson.michel/dash_streamlit_glpi/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://git.esig.group/wanderson.michel/dash_streamlit_glpi/issues)**: Submit bugs found or log feature requests for the `dash_streamlit_glpi` project.
-- **💡 [Submit Pull Requests](https://git.esig.group/wanderson.michel/dash_streamlit_glpi/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your git account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone https://git.esig.group/wanderson.michel/dash_streamlit_glpi
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to git**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://git.esig.group{/wanderson.michel/dash_streamlit_glpi/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=wanderson.michel/dash_streamlit_glpi">
-   </a>
-</p>
-</details>
-
----
-
-## 📜 License
-
-Dash_streamlit_glpi is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## ✨ Acknowledgments
-
-- Credit `contributors`, `inspiration`, `references`, etc.
-
-<div align="right">
-
-[![][back-to-top]](#top)
-
-</div>
-
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
-
----
+A aplicação estará disponível em `http://localhost:8501`.
