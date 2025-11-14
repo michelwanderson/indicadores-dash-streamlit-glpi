@@ -10,7 +10,7 @@ Um painel de controle interativo construído com Streamlit para visualizar e ana
 
 ## 📖 Sobre o Projeto
 
-Este projeto oferece uma interface web para a equipe de infraestrutura da ESIG Group monitorar e analisar métricas de chamados. Ele permite a filtragem por período e a visualização de dados através de diversos gráficos e tabelas, facilitando a identificação de tendências, gargalos e a performance da equipe.
+Este projeto oferece uma interface web para a equipe de infraestrutura da empresa XXX monitorar e analisar métricas de chamados. Ele permite a filtragem por período e a visualização de dados através de diversos gráficos e tabelas, facilitando a identificação de tendências, gargalos e a performance da equipe.
 
 ---
 
@@ -67,7 +67,7 @@ Antes de executar, é necessário configurar a fonte de dados.
 
 1.  Clone o repositório:
     ```sh
-    git clone <URL_DO_SEU_REPOSITORIO>
+    git clone (https://github.com/michelwanderson/indicadores-dash-streamlit-glpi/)
     cd indicadores-dash-streamlit-glpi
     ```
 
