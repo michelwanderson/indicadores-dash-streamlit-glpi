@@ -1,26 +1,21 @@
-<div id="top">
+<div align="center" id="top">
 
 <!-- HEADER STYLE: COMPACT -->
-<img src="readmeai/assets/logos/ice.svg" width="30%" align="left" style="margin-right: 15px">
+<img src="readmeai/assets/logos/ice.svg" alt="project-logo" width="150px">
 
 # DASH_STREAMLIT_GLPI
-<em>Um dashboard interativo para visualização de dados do GLPI, construído com Streamlit.</em>
+
+*Um dashboard interativo para visualização de dados do GLPI, construído com Streamlit.*
 
 <!-- BADGES -->
-<img src="https://img.shields.io/git/license/wanderson.michel/dash_streamlit_glpi?style=flat-square&logo=opensourceinitiative&logoColor=white&color=E92063" alt="license">
-<img src="https://img.shields.io/git/last-commit/wanderson.michel/dash_streamlit_glpi?style=flat-square&logo=git&logoColor=white&color=E92063" alt="last-commit">
-<img src="https://img.shields.io/git/languages/top/wanderson.michel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="repo-top-language">
-<img src="https://img.shields.io/git/languages/count/wanderson.michel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="repo-language-count">
+<p>
+  <img src="https://img.shields.io/github/license/wandersonmichel/dash_streamlit_glpi?style=flat-square&logo=opensourceinitiative&logoColor=white&color=E92063" alt="License">
+  <img src="https://img.shields.io/github/last-commit/wandersonmichel/dash_streamlit_glpi?style=flat-square&logo=git&logoColor=white&color=E92063" alt="Last Commit">
+  <img src="https://img.shields.io/github/languages/top/wandersonmichel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="Top Language">
+  <img src="https://img.shields.io/github/languages/count/wandersonmichel/dash_streamlit_glpi?style=flat-square&color=E92063" alt="Language Count">
+</p>
 
-<em>Built with the tools and technologies:</em>
-
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B.svg?style=flat-square&logo=Streamlit&logoColor=white" alt="Streamlit">
-<img src="https://img.shields.io/badge/Docker-2496ED.svg?style=flat-square&logo=Docker&logoColor=white" alt="Docker">
-<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat-square&logo=Python&logoColor=white" alt="Python">
-<img src="https://img.shields.io/badge/Plotly-3F4F75.svg?style=flat-square&logo=Plotly&logoColor=white" alt="Plotly">
-<img src="https://img.shields.io/badge/pandas-150458.svg?style=flat-square&logo=pandas&logoColor=white" alt="pandas">
-
-<br clear="left"/>
+</div>
 
 ## 🌈 Table of Contents
 
@@ -28,40 +23,40 @@
 <summary>Table of Contents</summary>
 
 - [🌈 Table of Contents](#-table-of-contents)
-- [🔴 Overview](#-overview)
-- [🟠 Features](#-features)
-- [🟡 Project Structure](#-project-structure)
-    - [🟢 Project Index](#-project-index)
-- [🔵 Getting Started](#-getting-started)
-    - [🟣 Prerequisites](#-prerequisites)
-    - [⚫ Installation](#-installation)
-    - [⚪ Usage](#-usage)
-    - [🟤 Testing](#-testing)
+- [✨ Sobre o Projeto](#-sobre-o-projeto)
+- [� Funcionalidades](#-funcionalidades)
+- [🟡 Estrutura do Projeto](#-estrutura-do-projeto)
+- [🔵 Como Começar](#-como-começar)
+    - [🟣 Pré-requisitos](#-pré-requisitos)
+    - [⚫ Instalação](#-instalação)
+    - [⚪ Como Usar](#-como-usar)
+- [�️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [🌟 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-- [✨ Acknowledgments](#-acknowledgments)
+- [🤝 Como Contribuir](#-como-contribuir)
+- [📜 Licença](#-licença)
+- [✨ Agradecimentos](#-agradecimentos)
+- [⬆️ Voltar ao Topo](#️-voltar-ao-topo)
 
 </details>
 
 ---
 
-## 🔴 Visão Geral
+## ✨ Sobre o Projeto
 
 O **DASH_STREAMLIT_GLPI** é uma aplicação web interativa para visualização de dados de uma instância GLPI. Construído com Streamlit e Plotly, ele oferece insights sobre o gerenciamento de ativos de TI e as operações de help desk. A aplicação é containerizada usando Docker para facilitar a implantação.
 
 ---
 
-## 🟠 Features
+## 🟠 Funcionalidades
 
-- 📈 **Visualização de Dados Interativa**: Gráficos e tabelas dinâmicas para explorar os dados do GLPI.
-- 🐳 **Containerização com Docker**: Implantação fácil e consistente em qualquer ambiente com Docker.
-- 📊 **Análise de Chamados**: Dashboards para analisar chamados por status, categoria, técnico, e mais.
+- 📊 **Visualização de Dados Interativa**: Gráficos e tabelas dinâmicas para explorar os dados do GLPI.
+- 🐳 **Containerização com Docker**: Implantação fácil e consistente em qualquer ambiente.
+- 📈 **Análise de Chamados**: Dashboards para analisar chamados por status, categoria, técnico e mais.
 - 🔒 **Autenticação Segura**: (Opcional) Pode ser integrado com `streamlit-authenticator` para controle de acesso.
 
 ---
 
-## 🟡 Project Structure
+## 🟡 Estrutura do Projeto
 
 ```sh
 └── dash_streamlit_glpi/
@@ -111,11 +106,11 @@ O **DASH_STREAMLIT_GLPI** é uma aplicação web interativa para visualização 
 
 ### 🟣 Prerequisites
 
-Este projeto requer as seguintes dependências:
+Para executar este projeto, você precisará ter as seguintes ferramentas instaladas:
 
-- **Programming Language:** Python
-- **Package Manager:** Pip
-- **Container Runtime:** Docker
+- **Python** (versão 3.8 ou superior)
+- **Pip** (gerenciador de pacotes do Python)
+- **Docker** (para execução em contêiner)
 
 ### ⚫ Instalação
 
@@ -134,24 +129,28 @@ Build dash_streamlit_glpi from the source and install dependencies:
     ```
 
 3. **Instale as dependências:**
-
-	Você pode instalar as dependências usando Docker (recomendado) ou localmente com Pip.
+    Você pode instalar as dependências usando Docker (recomendado) ou um ambiente virtual Python.
 
     **Opção 1: Usando Docker (Recomendado)**
+    Construa a imagem Docker que conterá todas as dependências:
     ```sh
-    ❯ docker build -t dash-glpi .
+    docker build -t dash-glpi .
     ```
 
     **Opção 2: Usando Pip (Ambiente Local)**
+    Crie e ative um ambiente virtual, e então instale as dependências:
     ```sh
-    ❯ pip install -r requirements.txt
+    python -m venv .venv
+    source .venv/bin/activate  # No Windows, use: .venv\Scripts\activate
+    pip install -r requirements.txt
     ```
 
 ### ⚪ Usage
 
-Para executar o projeto:
+Siga as instruções abaixo de acordo com o método de instalação escolhido.
 
 **Com Docker:**
+Execute o contêiner a partir da imagem criada:
 ```sh
 docker run -p 8501:8501 dash-glpi
 ```
