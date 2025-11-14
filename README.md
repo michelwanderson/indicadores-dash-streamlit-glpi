@@ -67,7 +67,7 @@ Antes de executar, é necessário configurar a fonte de dados.
 
 1.  Clone o repositório:
     ```sh
-    git clone (https://github.com/michelwanderson/indicadores-dash-streamlit-glpi/)
+    git clone https://github.com/michelwanderson/indicadores-dash-streamlit-glpi/
     cd indicadores-dash-streamlit-glpi
     ```
 
