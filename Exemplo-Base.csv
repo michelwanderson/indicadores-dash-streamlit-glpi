@@ -1,0 +1,22 @@
+ID;Título;Localização;Status;Tempo de Abertura;Data de abertura;Requerente - Requerente;Atribuído - Técnico
+1;Problema com Impressora;São Paulo;Novo;1d 2h 30m;2025-12-01 08:30:00;Requerente_1;Ana Silva
+2;Rede Lenta;Rio de Janeiro;Em atendimento;2d 5h 15m;2025-12-01 09:45:00;Requerente_2;Bruno Costa
+3;Instalação de Software;Belo Horizonte;Pendente;0d 8h 0m;2025-12-02 10:15:00;Requerente_3;Carla Dias
+4;Criação de Usuário;São Paulo;Solucionado;3d 1h 20m;2025-12-02 11:00:00;Requerente_4;Daniel Souza
+5;Problema de Acesso;Curitiba;Fechado;1d 0h 45m;2025-12-03 14:00:00;Requerente_5;Eduarda Lima
+6;Problema com E-mail;Porto Alegre;Novo;0d 3h 10m;2025-12-03 15:30:00;Requerente_6;Fábio Santos
+7;Manutenção de Servidor;São Paulo;Em atendimento;4d 6h 0m;2025-12-04 09:00:00;Requerente_7;Gabriela Oliveira
+8;Backup não realizado;Rio de Janeiro;Pendente;2d 2h 5m;2025-12-04 11:20:00;Requerente_8;Ana Silva
+9;Problema com Impressora;Belo Horizonte;Solucionado;1d 4h 30m;2025-12-05 13:45:00;Requerente_9;Bruno Costa
+10;Rede Lenta;São Paulo;Fechado;3d 7h 50m;2025-12-05 16:00:00;Requerente_10;Carla Dias
+11;Instalação de Software;Curitiba;Novo;0d 1h 15m;2025-12-08 08:45:00;Requerente_11;Daniel Souza
+12;Criação de Usuário;Porto Alegre;Em atendimento;2d 0h 30m;2025-12-08 10:00:00;Requerente_12;Eduarda Lima
+13;Problema de Acesso;São Paulo;Pendente;1d 9h 0m;2025-12-09 11:30:00;Requerente_13;Fábio Santos
+14;Problema com E-mail;Rio de Janeiro;Solucionado;0d 5h 25m;2025-12-09 14:10:00;Requerente_14;Gabriela Oliveira
+15;Manutenção de Servidor;Belo Horizonte;Fechado;5d 3h 0m;2025-12-10 09:30:00;Requerente_15;Ana Silva
+16;Backup não realizado;São Paulo;Novo;0d 2h 40m;2025-12-10 12:00:00;Requerente_1;Bruno Costa
+17;Problema com Impressora;Curitiba;Em atendimento;2d 6h 15m;2025-12-11 15:00:00;Requerente_2;Carla Dias
+18;Rede Lenta;Porto Alegre;Pendente;1d 1h 5m;2025-12-11 17:00:00;Requerente_3;Daniel Souza
+19;Instalação de Software;São Paulo;Solucionado;4d 0h 0m;2025-12-12 10:30:00;Requerente_4;Eduarda Lima
+20;Criação de Usuário;Rio de Janeiro;Fechado;0d 7h 45m;2025-12-12 14:45:00;Requerente_5;Fábio Santos
+21;Problema de Acesso;Belo Horizonte;Novo;0d 1h 30m;2025-12-15 09:00:00;Requerente_6;Gabriela Oliveira
