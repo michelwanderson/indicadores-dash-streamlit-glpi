@@ -57,10 +57,15 @@ Siga as instruções abaixo para executar o projeto em seu ambiente local.
 
 Antes de executar, é necessário configurar a fonte de dados.
 
-1.  Abra o arquivo `pag_streamlit.py`.
-2.  Altere a variável `URL` para o endereço do seu arquivo CSV de dados:
+1.  Ajuste a fonte de dados (CSV) usada pelo projeto. Existem duas formas comuns:
+
+    - Substituir o arquivo `Exemplo-Base.csv` pelo seu CSV com as mesmas colunas esperadas.
+    - Ou alterar a variável `ARQUIVO_BASE` no arquivo `app.py` ou em `plots.py` para apontar para o caminho/URL do seu CSV. Ex:
+
     ```python
-    URL = "http://seu-servidor/caminho/para/o/arquivo.csv"
+    ARQUIVO_BASE = "/caminho/para/seu-arquivo.csv"
+    # ou
+    ARQUIVO_BASE = "http://seu-servidor/caminho/para/o/arquivo.csv"
     ```
 
 ### 🏃 Executando Localmente (Sem Docker)
@@ -82,12 +87,32 @@ Antes de executar, é necessário configurar a fonte de dados.
     pip install -r requirements.txt
     ```
 
-4.  Execute a aplicação Streamlit:
+4.  Execute a aplicação Streamlit (entrypoint atual: `app.py`):
     ```sh
-    streamlit run pag_streamlit.py
+    streamlit run app.py
     ```
 
 A aplicação estará disponível em `http://localhost:8501`.
+
+---
+
+## 🧭 Notas de Desenvolvimento / Mudanças recentes
+
+- As funções de visualização/sub-rotinas (em `utils.py` e `views.py`) foram refatoradas para **não dependerem mais de variáveis globais** de data. Agora elas **recebem explicitamente** os parâmetros `Data_Inicial` e `Data_Final` (formatados como strings `YYYY-MM-DD`) — por exemplo:
+
+```py
+from utils import Localizacao
+Localizacao("2025-12-01", "2025-12-13")
+```
+
+- Os componentes `st.plotly_chart` passaram a receber um argumento `key=` único (gerado a partir do intervalo de datas) para evitar o erro Streamlit: "There are multiple plotly_chart elements with the same auto-generated ID" quando múltiplos gráficos do mesmo tipo são renderizados.
+
+- O entrypoint do projeto foi consolidado em `app.py` (anteriormente o README mencionava `pag_streamlit.py`), que cria a barra lateral para seleção de intervalo de datas e chama as funções do `utils.py` e `views.py` passando os parâmetros de data.
+
+- Se for usar o projeto como biblioteca (importando funções), lembre-se de passar `Data_Inicial` e `Data_Final` manualmente ou reutilizar a lógica do menu lateral em `app.py`.
+
+---
+
 
 ### 🐳 Executando com Docker
 
