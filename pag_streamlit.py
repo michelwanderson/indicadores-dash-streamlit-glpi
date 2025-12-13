@@ -12,7 +12,7 @@ Dataframe_Retorno = pd.read_csv(URL, sep=";")
 
 
 ##############                   Streamlit               ##############
-st.title("Indicadores Infraestrutura - ESIG Group")
+st.title("Indicadores Infraestrutura - XXX Group")
 
 
 # --- MENU LATERAL ---
@@ -92,24 +92,6 @@ def Tecnicos():
         title='Distribuição por Técnico')
     st.plotly_chart(fig_tecnico)
 
-
-def Divisao_Times():
-    def_div_times = Filtro_Data(Dataframe_Retorno,Data_Inicial,Data_Final,'Data de abertura')[0]
-    mapeamento_times = {
-        'marcos.alves' : 'DevOps',
-        'renato.sarmento' : 'DevOps',
-		'joan.lopes' : 'DevOps',
-		'fellipe.augusto' : 'DevOps',
-		'matheus.santos' : 'DevOps',
-		'amalia.beatriz' : 'Interno',
-		'joseane.palhares' : 'Interno',
-		'ebert.andrade' : 'Interno',
-		'rita.gomes' : 'Interno',
-		'erick.vinicius' : 'Interno',
-		'lucas.matheus' : 'Interno',
-		'guilherme.fernandes' : 'Segurança',
-		'joao.costa' : 'Segurança'
-    }
 
     Quant_Tec = (def_tecnico['Atribuído - Técnico'].value_counts().reset_index())
     fig_tecnico = px.pie(Quant_Tec,values='count',names='Atribuído - Técnico',title='Distribuição por Técnico')
@@ -281,7 +263,7 @@ def Dataframe_Completo():
         mask = df_completo.applymap(lambda x: filtro in str(x).lower()).any(axis=1)
         df_completo = df_completo[mask]
 
-    # print(df_completo)
+
     st.data_editor(df_completo, hide_index=True,
         column_order=(
             "Título",
@@ -306,7 +288,7 @@ def Dataframe_Completo_html():
 
     # Cria a coluna com hyperlink no ID
     df_completo["ID_Link"] = df_completo["ID"].apply(
-        lambda x: f'<a href="https://infra.esig.group/front/ticket.form.php?id={x}" target="_blank">{x}</a>'
+        lambda x: f'<a href="https://seu-link-glpi/front/ticket.form.php?id={x}" target="_blank">{x}</a>'
     )
 
     # Seleciona as colunas desejadas, substituindo o ID por ID_Link
@@ -328,7 +310,7 @@ def Dataframe_Completo_html():
 
 
 
-def Busca_Data_Hora_Modif(nome_arquivo="Base.txt", url="http://indicadores.esig.com.br:8080/glpi-api/dados/"):
+def Busca_Data_Hora_Modif(nome_arquivo="Base.txt", url="http://link-hospedagem-base-CSV:8080/glpi-api/dados/"):
     comando = f"curl -s {url} | grep {nome_arquivo} | awk \'{{print $3,$4}}\'"
     resultado_comando = subprocess.run([comando], shell=True, capture_output=True, text=True)
 
