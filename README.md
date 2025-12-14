@@ -5,13 +5,11 @@
 ![Docker](https://img.shields.io/badge/docker-friendly-blue.svg)
 
 ---
-
 ## 📖 Sobre o Projeto
 
 Este projeto oferece uma interface web para a equipe de infraestrutura da empresa XXX monitorar e analisar métricas de chamados. Ele permite a filtragem por período e a visualização de dados através de diversos gráficos e tabelas, facilitando a identificação de tendências, gargalos e a performance da equipe.
 
-
-
+<img src="imagens/home.png" alt="Home Page" width="700" />
 ---
 
 ## ✨ Funcionalidades
