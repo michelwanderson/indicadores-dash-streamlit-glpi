@@ -4,13 +4,13 @@
 ![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-red.svg)
 ![Docker](https://img.shields.io/badge/docker-friendly-blue.svg)
 
-Um painel de controle interativo construído com Streamlit para visualizar e analisar indicadores de chamados de TI, extraídos de uma instância GLPI.
-
 ---
 
 ## 📖 Sobre o Projeto
 
 Este projeto oferece uma interface web para a equipe de infraestrutura da empresa XXX monitorar e analisar métricas de chamados. Ele permite a filtragem por período e a visualização de dados através de diversos gráficos e tabelas, facilitando a identificação de tendências, gargalos e a performance da equipe.
+
+
 
 ---
 
