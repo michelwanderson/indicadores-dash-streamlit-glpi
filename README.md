@@ -27,6 +27,18 @@ O dashboard apresenta os seguintes indicadores e visualizações:
 *   **Tabela de Dados Completa:** Visualize, filtre e explore todos os dados brutos dos chamados.
 *   **Tabela com Links:** Uma tabela que fornece links diretos para cada chamado na interface do GLPI.
 
+<p align="center">
+  <img src="imagens/distribuicao-tecnicos.png" alt="Distribuição" width="30%" /></a>
+  <img src="imagens/categoria.png" alt="Categoria" width="30%" /></a>
+  <<img src="imagens/pareto.png" alt="Pareto" width="30%" /></a>
+</p>
+<p align="center">
+  <img src="imagens/requerente.png" alt="Requerente - Autor do Chamado" width="30%" /></a>
+  <img src="imagens/horarios.png" alt="Horarios" width="30%" /></a>
+  <img src="imagens/tabela.png" alt="Tabela" width="30%" /></a>
+</p>
+
+
 ---
 
 ## 🛠️ Tecnologias Utilizadas
